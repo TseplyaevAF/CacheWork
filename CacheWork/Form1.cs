@@ -28,7 +28,7 @@ namespace CacheWork
             CountPages = Convert.ToInt32(textBox_Page.Text);
             CountLines = Convert.ToInt32(textBox_String.Text);
             CountElements = Convert.ToInt32(textBox_Items.Text);
-            controller = new Controller(CountPages, CountLines, CountElements, "azaza");
+            controller = new Controller(CountPages, CountLines, CountElements, "MainMemory");
             label_WhereFrom.Text = "Ни один элемент пока не был загружен";
             label_WhereFrom.ForeColor = Color.Black;
             button_Create.Enabled = false;
