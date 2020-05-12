@@ -41,6 +41,15 @@ namespace CacheWork
             }
         }
 
+        // Записать заданную строку в массив
+        public void SetLineOnArray(ref int [,,] arr, int[] line, int indexPage, int indexLine, int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                arr[indexPage, indexLine, i] = line[i];
+            }
+        }
+
         public void WriteArray(int[,,] arr, int page, int n, int m)
         {
             using (Write = new BinaryWriter(new FileStream(filename, FileMode.Create)))
@@ -97,7 +106,7 @@ namespace CacheWork
         }
 
         //Записать строку temp в строку line в сегменте segment
-        public void SetLine(int segment, int line, int[] temp)
+        public void WriteLine(int segment, int line, int[] temp)
         {
             using (Write = new BinaryWriter(new FileStream(filename, FileMode.Open)))
             {

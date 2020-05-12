@@ -47,8 +47,6 @@
             this.textBox_PageSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox_ItemChange = new System.Windows.Forms.TextBox();
             this.button_Change = new System.Windows.Forms.Button();
             this.label_WhereFrom = new System.Windows.Forms.Label();
@@ -58,8 +56,7 @@
             this.label121 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_TimeFrom = new System.Windows.Forms.Label();
-            this.textBox_StringChange = new System.Windows.Forms.TextBox();
-            this.textBox_PageChange = new System.Windows.Forms.TextBox();
+            this.label_Adress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox_OP
@@ -166,9 +163,9 @@
             // 
             // button_Search
             // 
-            this.button_Search.Location = new System.Drawing.Point(519, 33);
+            this.button_Search.Location = new System.Drawing.Point(443, 77);
             this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(97, 21);
+            this.button_Search.Size = new System.Drawing.Size(66, 37);
             this.button_Search.TabIndex = 14;
             this.button_Search.Text = "Найти";
             this.button_Search.UseVisualStyleBackColor = true;
@@ -176,7 +173,7 @@
             // 
             // textBox_ItemSearch
             // 
-            this.textBox_ItemSearch.Location = new System.Drawing.Point(443, 33);
+            this.textBox_ItemSearch.Location = new System.Drawing.Point(443, 51);
             this.textBox_ItemSearch.Name = "textBox_ItemSearch";
             this.textBox_ItemSearch.Size = new System.Drawing.Size(66, 20);
             this.textBox_ItemSearch.TabIndex = 15;
@@ -185,7 +182,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(296, 15);
+            this.label2.Location = new System.Drawing.Point(296, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 15);
             this.label2.TabIndex = 18;
@@ -195,7 +192,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(368, 15);
+            this.label3.Location = new System.Drawing.Point(368, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 15);
             this.label3.TabIndex = 20;
@@ -203,14 +200,14 @@
             // 
             // textBox_StringSearch
             // 
-            this.textBox_StringSearch.Location = new System.Drawing.Point(371, 33);
+            this.textBox_StringSearch.Location = new System.Drawing.Point(371, 51);
             this.textBox_StringSearch.Name = "textBox_StringSearch";
             this.textBox_StringSearch.Size = new System.Drawing.Size(66, 20);
             this.textBox_StringSearch.TabIndex = 25;
             // 
             // textBox_PageSearch
             // 
-            this.textBox_PageSearch.Location = new System.Drawing.Point(299, 33);
+            this.textBox_PageSearch.Location = new System.Drawing.Point(299, 51);
             this.textBox_PageSearch.Name = "textBox_PageSearch";
             this.textBox_PageSearch.Size = new System.Drawing.Size(66, 20);
             this.textBox_PageSearch.TabIndex = 24;
@@ -219,64 +216,45 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(440, 15);
+            this.label4.Location = new System.Drawing.Point(440, 33);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 15);
+            this.label4.Size = new System.Drawing.Size(46, 15);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Элемент";
+            this.label4.Text = "Номер";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(440, 58);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(296, 77);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 15);
+            this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 33;
             this.label5.Text = "Элемент";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(368, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 15);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Строка";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(296, 58);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 15);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Страница";
-            // 
             // textBox_ItemChange
             // 
-            this.textBox_ItemChange.Location = new System.Drawing.Point(443, 76);
+            this.textBox_ItemChange.Location = new System.Drawing.Point(299, 94);
             this.textBox_ItemChange.Name = "textBox_ItemChange";
             this.textBox_ItemChange.Size = new System.Drawing.Size(66, 20);
             this.textBox_ItemChange.TabIndex = 28;
             // 
             // button_Change
             // 
-            this.button_Change.Location = new System.Drawing.Point(519, 76);
+            this.button_Change.Location = new System.Drawing.Point(371, 94);
             this.button_Change.Name = "button_Change";
-            this.button_Change.Size = new System.Drawing.Size(97, 21);
+            this.button_Change.Size = new System.Drawing.Size(66, 21);
             this.button_Change.TabIndex = 34;
             this.button_Change.Text = "Задать";
             this.button_Change.UseVisualStyleBackColor = true;
+            this.button_Change.Click += new System.EventHandler(this.button_Change_Click);
             // 
             // label_WhereFrom
             // 
             this.label_WhereFrom.AutoSize = true;
             this.label_WhereFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label_WhereFrom.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label_WhereFrom.Location = new System.Drawing.Point(296, 114);
+            this.label_WhereFrom.Location = new System.Drawing.Point(296, 128);
             this.label_WhereFrom.Name = "label_WhereFrom";
             this.label_WhereFrom.Size = new System.Drawing.Size(174, 16);
             this.label_WhereFrom.TabIndex = 35;
@@ -286,7 +264,7 @@
             // 
             this.label111.AutoSize = true;
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label111.Location = new System.Drawing.Point(296, 140);
+            this.label111.Location = new System.Drawing.Point(296, 154);
             this.label111.Name = "label111";
             this.label111.Size = new System.Drawing.Size(55, 15);
             this.label111.TabIndex = 38;
@@ -296,7 +274,7 @@
             // 
             this.label_StringFrom.AutoSize = true;
             this.label_StringFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_StringFrom.Location = new System.Drawing.Point(368, 140);
+            this.label_StringFrom.Location = new System.Drawing.Point(368, 154);
             this.label_StringFrom.Name = "label_StringFrom";
             this.label_StringFrom.Size = new System.Drawing.Size(80, 15);
             this.label_StringFrom.TabIndex = 39;
@@ -306,7 +284,7 @@
             // 
             this.label_ItemFrom.AutoSize = true;
             this.label_ItemFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_ItemFrom.Location = new System.Drawing.Point(368, 164);
+            this.label_ItemFrom.Location = new System.Drawing.Point(368, 178);
             this.label_ItemFrom.Name = "label_ItemFrom";
             this.label_ItemFrom.Size = new System.Drawing.Size(23, 15);
             this.label_ItemFrom.TabIndex = 41;
@@ -316,7 +294,7 @@
             // 
             this.label121.AutoSize = true;
             this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label121.Location = new System.Drawing.Point(296, 164);
+            this.label121.Location = new System.Drawing.Point(296, 178);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(66, 15);
             this.label121.TabIndex = 40;
@@ -326,7 +304,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(296, 190);
+            this.label1.Location = new System.Drawing.Point(296, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 42;
@@ -336,31 +314,29 @@
             // 
             this.label_TimeFrom.AutoSize = true;
             this.label_TimeFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label_TimeFrom.Location = new System.Drawing.Point(368, 190);
+            this.label_TimeFrom.Location = new System.Drawing.Point(368, 204);
             this.label_TimeFrom.Name = "label_TimeFrom";
             this.label_TimeFrom.Size = new System.Drawing.Size(55, 15);
             this.label_TimeFrom.TabIndex = 43;
             this.label_TimeFrom.Text = "00:00:00";
             // 
-            // textBox_StringChange
+            // label_Adress
             // 
-            this.textBox_StringChange.Location = new System.Drawing.Point(371, 76);
-            this.textBox_StringChange.Name = "textBox_StringChange";
-            this.textBox_StringChange.Size = new System.Drawing.Size(66, 20);
-            this.textBox_StringChange.TabIndex = 32;
-            // 
-            // textBox_PageChange
-            // 
-            this.textBox_PageChange.Location = new System.Drawing.Point(299, 76);
-            this.textBox_PageChange.Name = "textBox_PageChange";
-            this.textBox_PageChange.Size = new System.Drawing.Size(66, 20);
-            this.textBox_PageChange.TabIndex = 31;
+            this.label_Adress.AutoSize = true;
+            this.label_Adress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_Adress.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label_Adress.Location = new System.Drawing.Point(344, 16);
+            this.label_Adress.Name = "label_Adress";
+            this.label_Adress.Size = new System.Drawing.Size(104, 13);
+            this.label_Adress.TabIndex = 44;
+            this.label_Adress.Text = "Адрес элемента";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 439);
+            this.ClientSize = new System.Drawing.Size(537, 439);
+            this.Controls.Add(this.label_Adress);
             this.Controls.Add(this.label_TimeFrom);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_ItemFrom);
@@ -370,10 +346,6 @@
             this.Controls.Add(this.label_WhereFrom);
             this.Controls.Add(this.button_Change);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox_StringChange);
-            this.Controls.Add(this.textBox_PageChange);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox_ItemChange);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox_StringSearch);
@@ -393,6 +365,8 @@
             this.Controls.Add(this.label_OP);
             this.Controls.Add(this.textBox_Cache);
             this.Controls.Add(this.textBox_OP);
+            this.MaximumSize = new System.Drawing.Size(553, 478);
+            this.MinimumSize = new System.Drawing.Size(553, 478);
             this.Name = "Form1";
             this.Text = "Моделирование работы Кэш-памяти";
             this.ResumeLayout(false);
@@ -421,8 +395,6 @@
         private System.Windows.Forms.TextBox textBox_PageSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_ItemChange;
         private System.Windows.Forms.Button button_Change;
         private System.Windows.Forms.Label label_WhereFrom;
@@ -432,8 +404,7 @@
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_TimeFrom;
-        private System.Windows.Forms.TextBox textBox_StringChange;
-        private System.Windows.Forms.TextBox textBox_PageChange;
+        private System.Windows.Forms.Label label_Adress;
     }
 }
 

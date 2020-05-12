@@ -77,18 +77,31 @@ namespace CacheWork
             // иначе считываем строку из ОП
             buf = memory.ReadLine(indexPage, indexLine);
 
+            // если данный тэг уже занят другой строкой, то эту строку нужно
+            // скопировать и записать в файл (и в массив)
             if (cache[indexLine] != -1)
             {
                 int[] old_str = new int[memory.CountElements];
                 for (int i = 0; i < memory.CountElements; i++)
                 {
-                    old_str[i] = buf[i];
+                    old_str[i] = cache[indexLine, i];
                 }
-                memory.SetLine(indexPage, indexLine, old_str);
+                // вернем строку в файл в нужную страницу
+                memory.WriteLine(cache[indexLine], indexLine, old_str);
+                // вернем строку в массив в нужную страницу
+                memory.SetLineOnArray(ref arr, old_str, cache[indexLine], indexLine, memory.CountElements);
             }
             cache[indexLine] = indexPage; // присваиваем новому тэгу значение
-            cache.WriteLine(buf, memory.CountElements, indexLine); // добавляем строку в кэш
+            SetLineOnCache(buf, memory.CountElements, indexLine); // добавляем строку в кэш
             return buf;
+        }
+
+        /// <summary>
+        /// Записать строку в кэш
+        /// </summary>
+        public void SetLineOnCache(int [] buf, int countElements, int indexLine)
+        {
+            cache.WriteLine(buf, memory.CountElements, indexLine);
         }
     }
 }

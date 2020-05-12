@@ -38,6 +38,51 @@ namespace CacheWork
             textBox_Cache.ReadOnly = true;
         }
 
+        private void button_Change_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AdresI = Convert.ToInt32(textBox_PageSearch.Text);
+                AdresJ = Convert.ToInt32(textBox_StringSearch.Text);
+                AdresK = Convert.ToInt32(textBox_ItemSearch.Text);
+                Value = Convert.ToInt32(textBox_ItemChange.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Данные для поиска введены некорректно!");
+                return;
+            }
+
+            Time.Start();
+            str = controller.SearchLine(AdresI, AdresJ);
+            Time.Stop();
+
+            if (controller.IsCache)
+            {
+                label_WhereFrom.Text = "Элемент загружен из Кэша";
+                label_WhereFrom.ForeColor = Color.Red;
+            }
+            else
+            {
+                label_WhereFrom.Text = "Элемент загружен из Оп";
+                label_WhereFrom.ForeColor = Color.Blue;
+            }
+
+            str[AdresK] = Value; // сохраняем нужный элемент
+            controller.SetLineOnCache(str, CountElements, AdresJ);
+            label_ItemFrom.Text = Value.ToString();
+            label_StringFrom.Text = " ";
+            for (int i = 0; i < CountElements; i++)
+            {
+                label_StringFrom.Text += str[i].ToString() + " ";
+            }
+
+            WriteToTextBox_Cache();
+            WriteToTextBox_OP();
+            label_TimeFrom.Text = Time.Elapsed.ToString();
+            Time.Reset();
+        }
+
         private void button_Search_Click(object sender, EventArgs e)
         {
             try
