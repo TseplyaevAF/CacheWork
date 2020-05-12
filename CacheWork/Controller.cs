@@ -11,7 +11,6 @@ namespace CacheWork
         public static MainMemory memory;
         public static Cache cache;
         public static int[,,] arr;
-        public static int[] tags;
         bool isCache = false; // данные загружены из Кэш памяти
 
         public Controller(int countPages, int countLines, int countElements, string filename)
@@ -19,11 +18,11 @@ namespace CacheWork
             memory = new MainMemory(filename + ".txt", countPages, countLines, countElements);
             arr = new int[countPages, countLines, countElements];
             memory.RandomArray(arr, countPages, countLines, countElements);
-            memory.writeArray(arr, countPages, countLines, countElements);
+            memory.WriteArray(arr, countPages, countLines, countElements);
             cache = new Cache(countLines, countElements);
         }
 
-        public int this [int i, int j, int k]
+        public int this[int i, int j, int k]
         {
             get
             {
@@ -55,11 +54,15 @@ namespace CacheWork
             }
         }
 
-        public int[] SearchLine(int indexPage, int indexLine, int indexItem)
+        /// <summary>
+        /// Поиск строки в кэше, либо в ОП
+        /// </summary>
+        public int[] SearchLine(int indexPage, int indexLine)
         {
             int[] buf = new int[memory.CountElements];
 
-            // если 
+            // если строка с индексом indexLine находится в кэше с тэгом, равному indexPage
+            // считываем строку из кэша
             if (cache.isThereATag(indexPage, indexLine))
             {
                 for (int i = 0; i < memory.CountElements; i++)
@@ -71,24 +74,20 @@ namespace CacheWork
             }
             isCache = false;
 
-            for (int i = 0; i < memory.CountPages; i++)
+            // иначе считываем строку из ОП
+            buf = memory.ReadLine(indexPage, indexLine);
+
+            if (cache[indexLine] != -1)
             {
-                for (int j = 0; j < memory.CountLines; j++)
+                int[] old_str = new int[memory.CountElements];
+                for (int i = 0; i < memory.CountElements; i++)
                 {
-                    if ((indexPage == i) && (indexLine == j))
-                    {
-                        for (int k = 0; k < memory.CountElements; k++)
-                        {
-                            buf[k] = arr[i, j, k];
-                        }
-                        break;
-                    }
+                    old_str[i] = buf[i];
                 }
+                memory.SetLine(indexPage, indexLine, old_str);
             }
-
-            cache[indexLine] = indexPage;
-            cache.WriteLine(buf, memory.CountElements, indexLine);
-
+            cache[indexLine] = indexPage; // присваиваем новому тэгу значение
+            cache.WriteLine(buf, memory.CountElements, indexLine); // добавляем строку в кэш
             return buf;
         }
     }

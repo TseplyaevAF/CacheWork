@@ -33,6 +33,9 @@ namespace CacheWork
             label_WhereFrom.ForeColor = Color.Black;
             button_Create.Enabled = false;
             WriteToTextBox_OP();
+            WriteToTextBox_Cache();
+            textBox_OP.ReadOnly = true;
+            textBox_Cache.ReadOnly = true;
         }
 
         private void button_Search_Click(object sender, EventArgs e)
@@ -49,7 +52,7 @@ namespace CacheWork
             }
 
             Time.Start();
-            str = controller.SearchLine(AdresI, AdresJ, AdresK);
+            str = controller.SearchLine(AdresI, AdresJ);
             Time.Stop();
 
             if (controller.IsCache)
@@ -62,7 +65,7 @@ namespace CacheWork
                 label_WhereFrom.ForeColor = Color.Blue;
             }
 
-            Value = str[AdresK];
+            Value = str[AdresK]; // загружаем нужный элемент
             label_ItemFrom.Text = Value.ToString();
             label_StringFrom.Text = " ";
             for (int i = 0; i < CountElements; i++)
@@ -71,6 +74,7 @@ namespace CacheWork
             }
             
             WriteToTextBox_Cache();
+            WriteToTextBox_OP();
             label_TimeFrom.Text = Time.Elapsed.ToString();
             Time.Reset();
         }

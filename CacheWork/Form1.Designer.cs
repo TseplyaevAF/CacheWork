@@ -47,8 +47,6 @@
             this.textBox_PageSearch = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox_StringChange = new System.Windows.Forms.TextBox();
-            this.textBox_PageChange = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox_ItemChange = new System.Windows.Forms.TextBox();
@@ -60,6 +58,8 @@
             this.label121 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_TimeFrom = new System.Windows.Forms.Label();
+            this.textBox_StringChange = new System.Windows.Forms.TextBox();
+            this.textBox_PageChange = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox_OP
@@ -235,20 +235,6 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "Элемент";
             // 
-            // textBox_StringChange
-            // 
-            this.textBox_StringChange.Location = new System.Drawing.Point(371, 76);
-            this.textBox_StringChange.Name = "textBox_StringChange";
-            this.textBox_StringChange.Size = new System.Drawing.Size(66, 20);
-            this.textBox_StringChange.TabIndex = 32;
-            // 
-            // textBox_PageChange
-            // 
-            this.textBox_PageChange.Location = new System.Drawing.Point(299, 76);
-            this.textBox_PageChange.Name = "textBox_PageChange";
-            this.textBox_PageChange.Size = new System.Drawing.Size(66, 20);
-            this.textBox_PageChange.TabIndex = 31;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -356,6 +342,20 @@
             this.label_TimeFrom.TabIndex = 43;
             this.label_TimeFrom.Text = "00:00:00";
             // 
+            // textBox_StringChange
+            // 
+            this.textBox_StringChange.Location = new System.Drawing.Point(371, 76);
+            this.textBox_StringChange.Name = "textBox_StringChange";
+            this.textBox_StringChange.Size = new System.Drawing.Size(66, 20);
+            this.textBox_StringChange.TabIndex = 32;
+            // 
+            // textBox_PageChange
+            // 
+            this.textBox_PageChange.Location = new System.Drawing.Point(299, 76);
+            this.textBox_PageChange.Name = "textBox_PageChange";
+            this.textBox_PageChange.Size = new System.Drawing.Size(66, 20);
+            this.textBox_PageChange.TabIndex = 31;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,8 +421,6 @@
         private System.Windows.Forms.TextBox textBox_PageSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox_StringChange;
-        private System.Windows.Forms.TextBox textBox_PageChange;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox_ItemChange;
@@ -434,6 +432,8 @@
         private System.Windows.Forms.Label label121;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_TimeFrom;
+        private System.Windows.Forms.TextBox textBox_StringChange;
+        private System.Windows.Forms.TextBox textBox_PageChange;
     }
 }
 
